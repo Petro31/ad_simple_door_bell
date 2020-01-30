@@ -96,7 +96,7 @@ class DoorBell(hass.Hass):
                 self.call_service(service.call, **service.data)
 
     def terminate(self):
-        self.log("Canceling handle '{self.handle}'", level=self._level)
+        self.log(f"Canceling handle '{self.handle}'", level=self._level)
         self.cancel_listen_event(self.handle)
 
     def parse_notify(self, notify_list):
